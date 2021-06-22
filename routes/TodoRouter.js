@@ -63,4 +63,15 @@ router.get('/todo/:id', function(req, res) {
   })
 });
 
+//Get all todo for specific user:
+router.get('/todoUser/:user_id', function(req, res) {
+  var user_id = req.params.user_id;
+  todoModel.GetUserTodo(user_id, function (result, error) {
+    if (error)
+      res.send({data: [], message: error});
+    else
+      res.send({data: result, message: 'todo user has returned successfully'})
+  })
+});
+
 module.exports = router;

@@ -43,10 +43,21 @@ function GetTodo(id, callback) {
     })
 }
 
+//Get all todo for specific user:
+function GetUserTodo(user_id, callback) {
+    db.connection.query('select * from todo where user_id = ?', [user_id], function (error, results) {
+        if (error)
+            callback([], error);
+        else
+            callback(results);
+    })
+}
+
 //module exports :
 module.exports = {
     AddNewTodo: AddNewTodo,
     UpdateTodo: UpdateTodo,
     DeleteNewTodo: DeleteNewTodo,
-    GetTodo: GetTodo
+    GetTodo: GetTodo,
+    GetUserTodo: GetUserTodo
 };

@@ -96,6 +96,25 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todoUser/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todoUser",
+						"2"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
