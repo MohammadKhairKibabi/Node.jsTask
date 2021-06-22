@@ -1,0 +1,101 @@
+{
+	"info": {
+		"_postman_id": "2c7a3dbd-e8b7-43d8-bcc5-8451198f134e",
+		"name": "Todo Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\" : \"2\",\r\n    \"todo_info\" : \"info2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/todo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"todo_info\" : \"info3\",\r\n    \"id\" : 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/todo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todo/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/todo/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"todo",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
